@@ -1,7 +1,7 @@
 {
 	"@metadata": {
-		"authors": [ "Mike9012" ]
+		"authors": [ "Timwi and Mike9012" ]
 	},
-	"skinname-tunic": "Tunic",
+	"skinname-tunic": "tunic",
 	"tunic-desc": "A revival of former MediaWiki skin Chick using modern codebade that is for PDAs and other mobile devices"
 }

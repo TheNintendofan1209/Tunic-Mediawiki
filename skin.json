@@ -1,17 +1,36 @@
 {
 	"name": "Tunic",
 	"version": "1.0",
-	"author": "Mike9012",
+	"author": "Timwi and Mike9012",
 	"url": "https://github.com/TheNintendofan1209/Tunic-Mediawiki",
 	"descriptionmsg": "tunic-desc",
 	"namemsg": "skinname-tunic",
 	"license-name": "GPL-2.0-or-later",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.29.0"
+		"MediaWiki": ">= 1.35.0"
 	},
 	"ValidSkinNames": {
-		"tunic": "Tunic"
+		"tunic": {
+			"class": "SkinTunic",
+			"args": [ {
+				"name": "tunic",
+				"responsive": true,
+				"templateDirectory": "skins/Tunic/templates",
+				"styles": [
+					"skins.tunic"
+				],
+				"messages": [
+					"sitetitle",
+					"search",
+					"tagline",
+					"navigation-heading"
+				],
+				"scripts": [
+					"skins.tunic.js"
+				]
+			} ]
+		}
 	},
 	"MessagesDirs": {
 		"Tunic": [
@@ -21,10 +40,14 @@
 	"ResourceModules": {
 		"skins.tunic": {
 			"class": "ResourceLoaderSkinModule",
+			"features": [
+				"normalize",
+				"elements",
+				"content",
+				"interface",
+				"logo"
+			],
 			"styles": {
-				"resources/libraries/normalise.css": {
-					"media": "screen"
-				},
 				"resources/screen-common.less": {
 					"media": "screen"
 				},
