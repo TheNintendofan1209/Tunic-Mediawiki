@@ -1,0 +1,62 @@
+{
+	"name": "Tunic",
+	"version": "1.0",
+	"author": "Mike9012",
+	"url": "https://github.com/TheNintendofan1209/Tunic-Mediawiki",
+	"descriptionmsg": "tunic-desc",
+	"namemsg": "skinname-tunic",
+	"license-name": "GPL-2.0-or-later",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"ValidSkinNames": {
+		"tunic": "Tunic"
+	},
+	"MessagesDirs": {
+		"Tunic": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"skins.tunic": {
+			"class": "ResourceLoaderSkinModule",
+			"styles": {
+				"resources/libraries/normalise.css": {
+					"media": "screen"
+				},
+				"resources/screen-common.less": {
+					"media": "screen"
+				},
+				"resources/screen-desktop.less": {
+					"media": "screen and (min-width: 751px)"
+				},
+				"resources/screen-mobile.less": {
+					"media": "screen and (max-width: 750px)"
+				},
+				"resources/print.css": {
+					"media": "print"
+				}
+			}
+		},
+		"skins.tunic.js": {
+			"scripts": [
+				"resources/main.js"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Tunic"
+	},
+	"ResourceModuleSkinStyles": {
+		"tunic": {
+			"+ext.echo.styles.badge": "resources/extensions/echo.styles.badge.less"
+		}
+	},
+	"AutoloadClasses": {
+		"SkinTunic": "includes/SkinTunic.php",
+		"TunicTemplate": "includes/TunicTemplate.php"
+	},
+	"manifest_version": 1
+}
